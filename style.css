@@ -1,0 +1,33 @@
+
+input{
+    width: 50%;
+    margin: 20px;
+}
+form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #294D50;
+}
+.box{
+    width: 50%;
+    height: fit-content;
+    border: 3px;
+    border-style: dashed;
+}
+.box{
+    height: 200px !important;
+}
+button{
+    background-color: #20AA98;
+}
+.reset{
+    background-color: #FCFFFC;
+    color: #7A7D7A;
+}
