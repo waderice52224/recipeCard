@@ -6,6 +6,16 @@ const recipeObj = {
     ingredients: [],
     instructions: []
 };
+function deletePlaceholdIng(){
+    const deleteMe = document.getElementById('deleteMeIng');
+    deleteMe.remove();
+
+}
+function deletePlaceholdIst(){
+    const deleteMe = document.getElementById('deleteMeIns');
+    deleteMe.remove();
+
+}
 
 title.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -29,8 +39,15 @@ ingredient.addEventListener('submit', function(event) {
 
     content.textContent = inputValue;
 
+    content.setAttribute('data-ingredient', inputValue);
+
+    content.addEventListener("click", () => content.remove())
+
     myDiv.appendChild(content);
+
+
     recipeObj.ingredients.push(inputValue);
+    deletePlaceholdIng();
 });
 
 instruction.addEventListener('submit', function(event) {
@@ -44,8 +61,15 @@ instruction.addEventListener('submit', function(event) {
 
     content.textContent = inputValue;
 
+    content.setAttribute('data-instruction', inputValue);
+
+    content.addEventListener("click", () => content.remove())
+
     myDiv.appendChild(content);
+
+
     recipeObj.instructions.push(inputValue);
+    deletePlaceholdIst();
 
 });
 

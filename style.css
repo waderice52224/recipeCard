@@ -1,7 +1,19 @@
 
 input{
-    width: 50%;
-    margin: 20px;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: white;
+    padding-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: bold;
+    color: #7A7D7A;
 }
 form{
     width: 50%;
@@ -17,17 +29,118 @@ body{
 }
 .box{
     width: 50%;
+    min-height: 200px;
     height: fit-content;
-    border: 3px;
+    border: 1px;
     border-style: dashed;
+    border-radius: 20px;
+    border-color: #7A7D7A;
 }
-.box{
-    height: 200px !important;
+
+.buttons{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
 }
 button{
     background-color: #20AA98;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: white;
+    padding-left: 20px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+    padding: 10px;
 }
 .reset{
     background-color: #FCFFFC;
-    color: #7A7D7A;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: white;
+    font-weight: bold;
+    color: #555855;
+    padding: 10px;
 }
+p{
+    background-color: #20AA98;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+    padding: 10px;
+    width: fit-content;
+}
+#deleteMeIng{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+    color: white;
+    margin-top: 80px;
+}
+#deleteMeIns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+    color: white;
+    margin-top: 80px;
+}
+.submit{
+    margin-left: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border: #555855;
+    background-color: white;
+    font-weight: bold;
+    color: #555855;
+    height: 40px;
+}
+.ingredientInput{
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: white;
+    padding-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: bold;
+    color: #7A7D7A;
+    border-right: 2px solid #ccc;
+}
+.instructionInput{
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: white;
+    padding-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: bold;
+    color: #7A7D7A;
+    border-right: 2px solid #ccc;
+}
+h1{
+    color: white;
+}
+
