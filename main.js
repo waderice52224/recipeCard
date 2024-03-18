@@ -9,6 +9,7 @@ title.addEventListener('submit', function(event) {
 
     console.log('Tile:', inputValue);
 
+
 });
 
 
@@ -17,8 +18,13 @@ ingredient.addEventListener('submit', function(event) {
 
     const inputValue = document.getElementById('ingredientInput').value;
 
-    console.log('Ingredient:', inputValue);
+    const myDiv = document.getElementById('ingredientsBox');
 
+    const content = document.createElement('p');
+
+    content.textContent = inputValue;
+
+    myDiv.appendChild(content);
 });
 
 instruction.addEventListener('submit', function(event) {
@@ -26,6 +32,12 @@ instruction.addEventListener('submit', function(event) {
 
     const inputValue = document.getElementById('instructionInput').value;
 
-    console.log('Instuction:', inputValue);
+    const myDiv = document.getElementById('instructionsBox');
+
+    const content = document.createElement('p');
+
+    content.textContent = inputValue;
+
+    myDiv.appendChild(content);
 
 });
