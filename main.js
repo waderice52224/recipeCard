@@ -6,15 +6,19 @@ const recipeObj = {
     ingredients: [],
     instructions: []
 };
+
 function deletePlaceholdIng(){
     const deleteMe = document.getElementById('deleteMeIng');
-    deleteMe.remove();
-
+    if (deleteMe) {
+        deleteMe.remove();
+    }
 }
+
 function deletePlaceholdIst(){
     const deleteMe = document.getElementById('deleteMeIns');
-    deleteMe.remove();
-
+    if (deleteMe) {
+        deleteMe.remove();
+    }
 }
 
 title.addEventListener('submit', function(event) {
@@ -23,10 +27,9 @@ title.addEventListener('submit', function(event) {
     const inputValue = document.getElementById('recipeTitleInput').value;
 
     recipeObj.title = inputValue;
-
+    document.getElementById('recipeTitleInput').value = inputValue + " is now the tile of the recipe."
 
 });
-
 
 ingredient.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -41,13 +44,19 @@ ingredient.addEventListener('submit', function(event) {
 
     content.setAttribute('data-ingredient', inputValue);
 
-    content.addEventListener("click", () => content.remove())
+    content.addEventListener("click", () => {
+        content.remove();
+        const index = recipeObj.ingredients.indexOf(inputValue);
+        if (index !== -1) {
+            recipeObj.ingredients.splice(index, 1);
+        }
+    });
 
     myDiv.appendChild(content);
 
-
     recipeObj.ingredients.push(inputValue);
     deletePlaceholdIng();
+    document.getElementById('ingredientInput').value = "";
 });
 
 instruction.addEventListener('submit', function(event) {
@@ -63,13 +72,17 @@ instruction.addEventListener('submit', function(event) {
 
     content.setAttribute('data-instruction', inputValue);
 
-    content.addEventListener("click", () => content.remove())
+    content.addEventListener("click", () => {
+        content.remove();
+        const index = recipeObj.instructions.indexOf(inputValue);
+        if (index !== -1) {
+            recipeObj.instructions.splice(index, 1);
+        }
+    });
 
     myDiv.appendChild(content);
 
-
     recipeObj.instructions.push(inputValue);
     deletePlaceholdIst();
-
+    document.getElementById('instructionInput').value = "";
 });
-
